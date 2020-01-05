@@ -10,7 +10,10 @@ def create_project_hash
   
   projects = {}
   
-  kickstarter.css("li.project.grid_4").each {|project| projects[project] = {}}
+  kickstarter.css("li.project.grid_4").each {|project| projects[project] = {}
+    
+    :image_link => projects.css("div.project-thumbnail a img").attribute("src").value 
+  }
   projects
   
   # write your code here
@@ -20,7 +23,6 @@ end
 
 
 #titles = projects.css("h2.bbcard_name strong a").text
-# image_link = projects.css("div.project-thumbnail a img").attribute("src").value 
 # description = projects.css("p.bbcard_blurb").text
 # project_location = projects.css("ul.project-meta span.location-name").text
 # percent_funded = projects.css("ul.project-stats li.first.funded strong").text.gsub("%", "").to_i
