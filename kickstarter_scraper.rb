@@ -10,7 +10,7 @@ def create_project_hash
   
   projects = {}
   
-  kickstarter.css("li.project.grid_4").each {|project| projects[project] = {}
+  kickstarter.css("li.project.grid_4").each {|project| projects[project] = {},
     
     :image_link => projects.css("div.project-thumbnail a img").attribute("src").value 
   }
