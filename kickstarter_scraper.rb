@@ -11,7 +11,7 @@ def create_project_hash
   projects = {}
   
   kickstarter.css("li.project.grid_4").each {|project| projects[project] = {}}
-  
+  projects
   
   # write your code here
 # binding.pry  
