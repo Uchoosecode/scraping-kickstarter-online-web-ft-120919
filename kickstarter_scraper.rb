@@ -19,3 +19,5 @@ end
 # image_link = projects.css("div.project-thumbnail a img").attribute("src").value 
 # description = projects.css("p.bbcard_blurb").text
 # project_location = projects.css("div.project-card").text
+# percent_funded = projects.css("ul.project-stats li.first.funded strong").text
+
